@@ -11,15 +11,16 @@ while attempts < 6:
         print("Ви ввели слово, яке складається більше або менше ніж з 5 літер")
         continue
     attempts = attempts + 1
-    for i in range(5):
-        if input_attempt[i] == secret[i]:
-            print(f"{input_attempt[i]} - Green")
-        elif input_attempt[i] in secret:
-            print(f"{input_attempt[i]} - yellow")
+    for index in range(5):
+        if input_attempt[index] == secret[index]:
+            print(f"[{input_attempt[index]}] - Green")
+        elif input_attempt[index] in secret:
+            print(f"({input_attempt[index]}) - yellow")
         else:
-            print(f"{input_attempt[i]} - NoMatch")
+            print(f"{input_attempt[index]} - NoMatch")
     if input_attempt == secret:
         print("Вітаю, ви вгадали")
+        print(f"Кількість використаних спроб: {attempts}")
         break
 else:
-    print("Нажаль спроби закінчилися, ви програли")
+    print(f"Нажаль спроби закінчилися, ви програли :(. Правильне слово було: {secret}")
