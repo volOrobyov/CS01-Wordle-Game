@@ -20,13 +20,13 @@ while attempts < 6:
         for index in range(5):
             if input_attempt[index] == secret[index]:
                 check.append(Fore.GREEN + input_attempt[index] + Style.RESET_ALL)
-                comment = (Fore.LIGHTGREEN_EX + f"{input_attempt[index]} Стоїть на своєму місті" + Style.RESET_ALL)
+                comment = (Fore.LIGHTGREEN_EX + f"{input_attempt[index]}" + Fore.BLUE + " Стоїть на своєму місті" + Style.RESET_ALL)
             elif input_attempt[index] in secret:
                 check.append(Fore.YELLOW + input_attempt[index] + Style.RESET_ALL)
-                comment = (Fore.LIGHTYELLOW_EX + f"{input_attempt[index]} Є в слові, але не стоїть на своєму місті" + Style.RESET_ALL)
+                comment = (Fore.LIGHTYELLOW_EX + f"{input_attempt[index]}" + Fore.BLUE + " Є в слові, але не стоїть на своєму місті" + Style.RESET_ALL)
             else:
                 check.append(Fore.RED + input_attempt[index] + Style.RESET_ALL)
-                comment = (Fore.LIGHTRED_EX + f"{input_attempt[index]} Цієї літери немає в слові" + Style.RESET_ALL)
+                comment = (Fore.LIGHTRED_EX + f"{input_attempt[index]}" + Fore.BLUE + " Цієї літери немає в слові" + Style.RESET_ALL)
             print(comment)
         print("------------------------------------------------")
         print(' '.join(check))
