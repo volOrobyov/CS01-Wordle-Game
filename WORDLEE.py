@@ -4,7 +4,6 @@ import random
 print("Ласкаво просимо в гру!")
 print("У вас є 6 спроб щоб вгадати слово")
 words = ["apple","house","water","green","happy","table","light","bread","fruit","sleep"]
-
 secret = random.choice(words)
 attempts = 0
 while attempts < 6:
@@ -26,10 +25,10 @@ while attempts < 6:
             else:
                 check.append(Fore.RED + input_attempt[index] + Style.RESET_ALL)
         print(' '.join(check))
-
         if input_attempt == secret:
             print("Вітаю, ви вгадали")
             print(f"Кількість використаних спроб: {attempts}")
             break
+            #Вже зробив в попередніх комітах, тому просто додам нотаток (перемога\поразка)
 else:
     print(f"Нажаль спроби закінчилися, ви програли :(. Правильне слово було: {secret}")
