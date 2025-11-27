@@ -8,7 +8,7 @@ secret = random.choice(words)
 attempts = 0
 while attempts < 6:
     print(f"{attempts + 1} спроба із 6")
-    input_attempt = input("Спробуйте вгадати слово з 5 літер (вводити англійською мовою)")
+    input_attempt = input("Спробуйте вгадати слово з 5 літер (вводити англійською мовою)").lower()
     if input_attempt.isdigit():
         print("Треба вводити букви, а не цифри")
     else:
